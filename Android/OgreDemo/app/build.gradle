@@ -26,24 +26,24 @@ android {
         targetCompatibility JavaVersion.VERSION_1_7
     }
 
-    sourceSets {
-        main {
-            jni.srcDirs = []
-            // Prevent gradle from building native code with ndk; we have our own Makefile for it.
-            jniLibs.srcDir 'src/main/libs' // Where generated .so files are placed.
-            java.srcDirs = ['src/main/java', '../../../Source/ogresdk/Android']
-            assets.srcDirs = ['assets']//指定assets目录
-        }
-    }
-
-    task ndkBuild(type: Exec) {
-        workingDir file('src/main/jni')
-        commandLine getNdkBuildCmd()
-    }
-
-    tasks.withType(JavaCompile) {
-        compileTask -> compileTask.dependsOn ndkBuild
-    }
+//    sourceSets {
+//        main {
+//            jni.srcDirs = []
+//            // Prevent gradle from building native code with ndk; we have our own Makefile for it.
+//            jniLibs.srcDir 'src/main/libs' // Where generated .so files are placed.
+//            java.srcDirs = ['src/main/java', '../../../Source/ogresdk/Android']
+//            assets.srcDirs = ['assets']//指定assets目录
+//        }
+//    }
+//
+//    task ndkBuild(type: Exec) {
+//        workingDir file('src/main/jni')
+//        commandLine getNdkBuildCmd()
+//    }
+//
+//    tasks.withType(JavaCompile) {
+//        compileTask -> compileTask.dependsOn ndkBuild
+//    }
 
     //task cleanNative(type: Exec) {
         //workingDir file('src/main/jni')
@@ -79,6 +79,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile project(':ogre-lib')
     compile 'com.android.support:appcompat-v7:23.2.1'
     testCompile 'junit:junit:4.12'
 }

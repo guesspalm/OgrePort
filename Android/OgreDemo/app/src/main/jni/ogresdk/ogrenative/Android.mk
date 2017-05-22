@@ -14,7 +14,7 @@ LOCAL_SRC_FILES := $(OGRENATIVE_ROOT)/NativeActivity.cpp \
 
 LOCAL_STATIC_LIBRARIES := \
 
-LOCAL_LDLIBS        := -ldl -llog -lz -landroid
+LOCAL_LDLIBS        := -ldl -llog -lz -landroid -lEGL -lGLESv2
 
 LOCAL_CFLAGS += -DBUILD_TARGET_ANDROID
 

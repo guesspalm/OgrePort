@@ -44,6 +44,8 @@ THE SOFTWARE.
 #include <algorithm>
 #include <climits>
 
+#include <android/native_window.h>
+
 namespace Ogre {
 	AndroidEGLWindow::AndroidEGLWindow(AndroidEGLSupport *glsupport)
 		: EGLWindow(glsupport),

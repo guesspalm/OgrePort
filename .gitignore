@@ -74,3 +74,4 @@ captures/
 obj/
 .idea/
 Android/OgreDemo/ogre-lib/.externalNativeBuild
+Android/OgreDemo/app/.externalNativeBuild

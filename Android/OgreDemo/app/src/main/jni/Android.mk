@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 #define the source for the app
-#SOURCE_ROOT := $(LOCAL_PATH)/../../../../../../Source
+SOURCE_ROOT := /Users/yangchuanzhe/resource/3d/OgrePort/Source
 OGRESDK_ROOT = $(SOURCE_ROOT)/ogresdk
 OGREAPP_ROOT = $(SOURCE_ROOT)/ogreapp
 THIRDPARTY_ROOT = $(SOURCE_ROOT)/thirdparty
